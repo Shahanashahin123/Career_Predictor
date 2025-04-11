@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Career Predictor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Career Prediction Form</h1>
+
+  <form id="careerForm">
+    <label>Math: <input type="number" id="math" required></label><br><br>
+    <label>Science: <input type="number" id="science" required></label><br><br>
+    <label>English: <input type="number" id="english" required></label><br><br>
+    <label>Interest:
+      <select id="interest" required>
+        <option value="AI">AI</option>
+        <option value="Web">Web</option>
+        <option value="Data">Data</option>
+      </select>
+    </label><br><br>
+
+    <button type="submit">Predict Career</button>
+  </form>
+
+  <h2 id="result"></h2>
+
+  <script>
+    document.getElementById("careerForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const math = document.getElementById("math").value;
+      const science = document.getElementById("science").value;
+      const english = document.getElementById("english").value;
+      const interest = document.getElementById("interest").value;
+
+      fetch("http://127.0.0.1:5000/predict", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          Math: parseInt(math),
+          Science: parseInt(science),
+          English: parseInt(english),
+          Interest: interest
+        })
+      })
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("result").innerText = "Predicted Career: " + data.predicted_career;
+      })
+      .catch(error => {
+        document.getElementById("result").innerText = "Error: " + error;
+      });
+    });
+  </script>
+</body>
+</html>
