@@ -1,18 +1,35 @@
-# Career Predictor 🎯
+# 🎯 Career Predictor Web App
 
-This is a simple machine learning-powered web app that predicts your ideal career path based on your scores and interests.
+A simple, machine learning-powered web application that predicts your ideal career path based on your subject scores and personal interests.
 
 ## 🔧 Tech Stack
-- Frontend: HTML, CSS, JavaScript
-- Backend: Flask (Python)
-- ML Model: Decision Tree Classifier
-- Deployment: Render
+
+- **Frontend:** HTML, CSS, JavaScript  
+- **Backend:** Flask (Python)  
+- **Machine Learning Model:** Decision Tree Classifier  
+- **Deployment:** Render
 
 ## 📦 Features
-- Predicts a career like Web Developer, AI Engineer, or Data Analyst.
-- Takes subject scores and interest as input.
-- Clean, modern UI.
-- Connected frontend and backend using fetch API.
 
-## 👩‍💻 Created by
-Shahana Shahin P — Aspiring Software Engineer 💻
+- 🔍 Predicts suitable career options like **Web Developer**, **AI Engineer**, **Data Analyst**, and more  
+- 📊 Accepts user input for subject scores and interest areas  
+- 🖥️ Clean and modern UI for a smooth user experience  
+- 🔗 Frontend and backend connected via **Fetch API**  
+
+## 🚀 How It Works
+
+1. User enters their scores and interests.
+2. The data is sent to the Flask backend using a fetch request.
+3. A trained Decision Tree Classifier model processes the input.
+4. The predicted career path is displayed on the screen.
+
+## 📁 Project Structure
+
+career-predictor/
+├── static/
+│ ├── style.css
+├── templates/
+│ ├── index.html
+├── app.py
+├── model.pkl
+├── README.md
