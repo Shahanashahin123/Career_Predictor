@@ -1,35 +1,70 @@
 # 🎯 Career Predictor Web App
 
-A simple, machine learning-powered web application that predicts your ideal career path based on your subject scores and personal interests.
+A simple machine learning-powered web application that predicts your ideal career path based on your academic scores and interests.
+
+## 👩‍💻 Created by
+**Shahana Shahin**  
+GitHub: [Shahanashahin123](https://github.com/Shahanashahin123)
+
+---
 
 ## 🔧 Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript  
 - **Backend:** Flask (Python)  
-- **Machine Learning Model:** Decision Tree Classifier  
-- **Deployment:** Render
+- **ML Model:** Decision Tree Classifier (trained using `train_model.py`)  
+- **Deployment:** Render (or suitable platform)
+
+---
+
+## 📂 Project Files
+
+| File                | Description |
+|---------------------|-------------|
+| `app.py`            | Main Flask backend application |
+| `index.html`        | Frontend UI |
+| `style.css`         | CSS for styling |
+| `career_model.pkl`  | Trained Decision Tree model |
+| `label_encoder.pkl` | Label encoder for target classes |
+| `career_data.csv`   | Dataset used for training |
+| `train_model.py`    | Script to train and save the model |
+| `requirments.txt`   | Python dependencies |
+| `pyvenv.cfg`        | Virtual environment config (optional)
+
+---
 
 ## 📦 Features
 
-- 🔍 Predicts suitable career options like **Web Developer**, **AI Engineer**, **Data Analyst**, and more  
-- 📊 Accepts user input for subject scores and interest areas  
-- 🖥️ Clean and modern UI for a smooth user experience  
-- 🔗 Frontend and backend connected via **Fetch API**  
+- Predicts careers such as **Web Developer**, **AI Engineer**, **Data Analyst**, etc.
+- Accepts user input for subject scores and area of interest.
+- Clean and user-friendly UI.
+- Frontend and backend connected using **Fetch API**.
+- Lightweight and easy to deploy.
 
-## 🚀 How It Works
+---
 
-1. User enters their scores and interests.
-2. The data is sent to the Flask backend using a fetch request.
-3. A trained Decision Tree Classifier model processes the input.
-4. The predicted career path is displayed on the screen.
+## 🚀 How to Run Locally
 
-## 📁 Project Structure
+1. **Clone the repository**
+   
+   git clone https://github.com/Shahanashahin123/career-predictor.git
+   cd career-predictor
 
-career-predictor/
-├── static/
-│ ├── style.css
-├── templates/
-│ ├── index.html
-├── app.py
-├── model.pkl
-├── README.md
+2. **Create and activate virtual environment**
+
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+3. **Install dependencies**
+   
+   pip install -r requirments.txt
+   
+4. **Run the application**
+
+   python app.py
+   
+6. Open your browser and go to:
+   
+   http://localhost:5000
+
+   
